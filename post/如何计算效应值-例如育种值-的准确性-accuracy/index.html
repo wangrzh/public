@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.31.1" />
+  <meta name="author" content="Jane Wang">
+  <meta name="description" content="PhD">
+
+  
+  <link rel="alternate" hreflang="en-us" href="../../post/%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E6%95%88%E5%BA%94%E5%80%BC-%E4%BE%8B%E5%A6%82%E8%82%B2%E7%A7%8D%E5%80%BC-%E7%9A%84%E5%87%86%E7%A1%AE%E6%80%A7-accuracy/">
+
+  
+  
+
+
+  
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="../../styles.css">
+  
+
+  
+
+  
+  <link rel="alternate" href="../../index.xml" type="application/rss+xml" title="Jane Wang&#39;s private blog">
+  <link rel="feed" href="../../index.xml" type="application/rss+xml" title="Jane Wang&#39;s private blog">
+  
+
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="icon" type="image/png" href="../../img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="../../img/icon-192.png">
+
+  <link rel="canonical" href="../../post/%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E6%95%88%E5%BA%94%E5%80%BC-%E4%BE%8B%E5%A6%82%E8%82%B2%E7%A7%8D%E5%80%BC-%E7%9A%84%E5%87%86%E7%A1%AE%E6%80%A7-accuracy/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@">
+  <meta property="twitter:creator" content="@">
+  
+  <meta property="og:site_name" content="Jane Wang&#39;s private blog">
+  <meta property="og:url" content="/post/%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E6%95%88%E5%BA%94%E5%80%BC-%E4%BE%8B%E5%A6%82%E8%82%B2%E7%A7%8D%E5%80%BC-%E7%9A%84%E5%87%86%E7%A1%AE%E6%80%A7-accuracy/">
+  <meta property="og:title" content="如何计算效应值（例如育种值）的准确性（accuracy）？ | Jane Wang&#39;s private blog">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2017-10-01T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2017-10-01T00:00:00&#43;00:00">
+  
+
+  
+
+  <title>如何计算效应值（例如育种值）的准确性（accuracy）？ | Jane Wang&#39;s private blog</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="../../">Jane Wang&#39;s private blog</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="../../#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="../../#publications_selected">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="../../#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="../../#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">如何计算效应值（例如育种值）的准确性（accuracy）？</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2017-10-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Oct 1, 2017
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="../../categories/r">R</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=%e5%a6%82%e4%bd%95%e8%ae%a1%e7%ae%97%e6%95%88%e5%ba%94%e5%80%bc%ef%bc%88%e4%be%8b%e5%a6%82%e8%82%b2%e7%a7%8d%e5%80%bc%ef%bc%89%e7%9a%84%e5%87%86%e7%a1%ae%e6%80%a7%ef%bc%88accuracy%ef%bc%89%ef%bc%9f&amp;url=%2fpost%2f%25E5%25A6%2582%25E4%25BD%2595%25E8%25AE%25A1%25E7%25AE%2597%25E6%2595%2588%25E5%25BA%2594%25E5%2580%25BC-%25E4%25BE%258B%25E5%25A6%2582%25E8%2582%25B2%25E7%25A7%258D%25E5%2580%25BC-%25E7%259A%2584%25E5%2587%2586%25E7%25A1%25AE%25E6%2580%25A7-accuracy%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2f%25E5%25A6%2582%25E4%25BD%2595%25E8%25AE%25A1%25E7%25AE%2597%25E6%2595%2588%25E5%25BA%2594%25E5%2580%25BC-%25E4%25BE%258B%25E5%25A6%2582%25E8%2582%25B2%25E7%25A7%258D%25E5%2580%25BC-%25E7%259A%2584%25E5%2587%2586%25E7%25A1%25AE%25E6%2580%25A7-accuracy%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2f%25E5%25A6%2582%25E4%25BD%2595%25E8%25AE%25A1%25E7%25AE%2597%25E6%2595%2588%25E5%25BA%2594%25E5%2580%25BC-%25E4%25BE%258B%25E5%25A6%2582%25E8%2582%25B2%25E7%25A7%258D%25E5%2580%25BC-%25E7%259A%2584%25E5%2587%2586%25E7%25A1%25AE%25E6%2580%25A7-accuracy%2f&amp;title=%e5%a6%82%e4%bd%95%e8%ae%a1%e7%ae%97%e6%95%88%e5%ba%94%e5%80%bc%ef%bc%88%e4%be%8b%e5%a6%82%e8%82%b2%e7%a7%8d%e5%80%bc%ef%bc%89%e7%9a%84%e5%87%86%e7%a1%ae%e6%80%a7%ef%bc%88accuracy%ef%bc%89%ef%bc%9f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2f%25E5%25A6%2582%25E4%25BD%2595%25E8%25AE%25A1%25E7%25AE%2597%25E6%2595%2588%25E5%25BA%2594%25E5%2580%25BC-%25E4%25BE%258B%25E5%25A6%2582%25E8%2582%25B2%25E7%25A7%258D%25E5%2580%25BC-%25E7%259A%2584%25E5%2587%2586%25E7%25A1%25AE%25E6%2580%25A7-accuracy%2f&amp;title=%e5%a6%82%e4%bd%95%e8%ae%a1%e7%ae%97%e6%95%88%e5%ba%94%e5%80%bc%ef%bc%88%e4%be%8b%e5%a6%82%e8%82%b2%e7%a7%8d%e5%80%bc%ef%bc%89%e7%9a%84%e5%87%86%e7%a1%ae%e6%80%a7%ef%bc%88accuracy%ef%bc%89%ef%bc%9f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=%e5%a6%82%e4%bd%95%e8%ae%a1%e7%ae%97%e6%95%88%e5%ba%94%e5%80%bc%ef%bc%88%e4%be%8b%e5%a6%82%e8%82%b2%e7%a7%8d%e5%80%bc%ef%bc%89%e7%9a%84%e5%87%86%e7%a1%ae%e6%80%a7%ef%bc%88accuracy%ef%bc%89%ef%bc%9f&amp;body=%2fpost%2f%25E5%25A6%2582%25E4%25BD%2595%25E8%25AE%25A1%25E7%25AE%2597%25E6%2595%2588%25E5%25BA%2594%25E5%2580%25BC-%25E4%25BE%258B%25E5%25A6%2582%25E8%2582%25B2%25E7%25A7%258D%25E5%2580%25BC-%25E7%259A%2584%25E5%2587%2586%25E7%25A1%25AE%25E6%2580%25A7-accuracy%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        <p><strong>准确性</strong>指的是<strong>预测效应值与真值之间的相关系数</strong>。有时还会遇见一个概念——<strong>可靠性</strong>（reliability）。可靠性是准确性的平方，也就是说这二者度量的是一个事情。<strong>reliability其实就是遗传力，这句很重要！！！</strong>。遗传力主要用来计算选择响应（response to selection）。advisor说我的文章<strong>短</strong>句子太多，不连贯，确实是这样LOL。
+准确性的计算公式为：</p>
+
+<p>$$r=\sqrt{1-\frac{PEV}{\hat{\sigma}_a^2}}$$</p>
+
+<p>*PEV*是prediction error variances的缩写，意思是预测误差方差，预测误差是预测值与真值间的差，即：</p>
+
+<p>$$PEV=var(\hat g-g)=(1-r_{\hat g,g}^2)\sigma_a^2$$</p>
+
+<p>$\sigma_a^2$是加性方差。</p>
+
+<p>预测差值的标准误（*SED*）是可以从<code>Asreml</code>中直接得到的，与*PEV*的关系是：</p>
+
+<p>$$
+SED=\sqrt{\hat Var(BLUP.differences)}=\sqrt{\hat Var(\hat Y<em>i-\hat Y</em>{i^`})}=\sqrt{2\hat Var(\hat Y)_i}=\sqrt{2PEV}
+$$</p>
+
+<p><code>我不知道上面这个公式怎么推导的。</code>
+所以有</p>
+
+<p>$$PEV=(SED)^<sup>2</sup>&frasl;<sub>2</sub>=\hat Var(BLUP.differences)/2$$</p>
+
+<hr />
+
+<p>在很长时间里我不知道（或者说模糊地知道）accuracy是怎么实现的。我知道公式，但在软件里分别和公式组分对应的部分是什么却不是很清楚，当然写这篇文字的时候是确定的。具体实现的途径有2：</p>
+
+<ul>
+<li><p>一是利用Asreml中的<code>prediction</code>直接得到*SED*后，再根据公式4得出PEV</p>
+
+<pre><code>fm_pred &lt;- predict(fm_asr, classify = &quot;Fam&quot;) #fm_asr是asreml()输出的对象， Fam是随机效应变量
+SED &lt;- fm_pred$predictions$avsed
+</code></pre></li>
+
+<li><p>二是逐步得到*PEV*，每个预测值都有一个*PEV*，是预测值*SE*平方的均值，所以从预测函数得到的对象中提取出*SE*平方后再平均即可</p>
+
+<pre><code>fm_pred &lt;- predict(fm_asr, classify = &quot;Fam&quot;, present = &quot;Plot&quot;) #注意！这里预测的时候是要矫正掉其他的随机效应（如Plot）
+SE &lt;- fm_pred$predictions$pvals$standard.error
+PEV &lt;-  SE^2 %&gt;% mean
+</code></pre>
+
+<p>这里的*PEV*是一个向量，对应到每个水平上。
+所以，总体上，*PEV*、*SED*和*SE*的关系是
+$$PEV=(SED)^<sup>2</sup>&frasl;<sub>2</sub>=ave(SE_i^2)$$</p></li>
+</ul>
+
+<p>另外，在林元震老师的著作<strong>R与ASReml-R统计学</strong>中（P474）也涉及到accuracy的代码</p>
+
+<pre><code>SE &lt;- fm_asr$vcoeff$random * fm_asr$sigma2 #效应值se乘以sigma
+</code></pre>
+
+<p>结果是一样的，但不知道是否合理。</p>
+
+<hr />
+
+<p>如果没有Asreml可能需要更底层的计算（比如手动），这时*PEV*的计算更直观些：
+$$PEV=Var(\hat u-u)=diag(C^{22})\sigma_e^2=d_i\sigma_e^2=(1-r^2)\sigma_u^2$$
+于是有
+$$r^2=1-diag(C^{22})\frac{\sigma_e^2}{\sigma_u^2}$$</p>
+
+<p>$C^{22}$是方程组关联矩阵的逆矩阵的右下角块，$d_i$是块中的对角线元素。具体可查看<a href="https://pan.baidu.com/s/1hrDRLeG" target="_blank">Pro. Isik编写的教材P84</a>和<a href="https://pan.baidu.com/s/1nvmT47n" target="_blank">Mrode, 2014的书P44</a>。</p>
+
+<p>从*PEV*就可以得到我们需要的准确性和可靠性值了。</p>
+
+<hr />
+
+<p>这个问题在群中还被讨论过
+<img src="http://upload-images.jianshu.io/upload_images/3289684-9908dc53ac300bbc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="accuracy_chat.jpg" /></p>
+
+      </div>
+
+      
+
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+
+
+
+<div class="article-container">
+  
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Jane Wang &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    <script src="../../js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+
